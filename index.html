@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Superhero AR</title>
+  <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
+  <style>
+    html, body { margin:0; width:100%; height:100%; background:#111; }
+    model-viewer { width:100%; height:100%; background:#111; }
+    #ar-button {
+      position:absolute; left:50%; bottom:28px; transform:translateX(-50%);
+      border:0; border-radius:999px; padding:16px 24px;
+      font:700 17px Arial,sans-serif; color:white; background:#168a45;
+      box-shadow:0 4px 14px rgba(0,0,0,.35);
+    }
+  </style>
+</head>
+<body>
+  <model-viewer
+    src="superhero_girl_green_clean.glb"
+    ar
+    ar-modes="webxr scene-viewer quick-look"
+    ar-placement="floor"
+    camera-controls
+    shadow-intensity="1"
+    alt="Green superhero">
+    <button id="ar-button" slot="ar-button">VIEW SUPERHERO IN AR</button>
+  </model-viewer>
+</body>
+</html>
